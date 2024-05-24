@@ -18,6 +18,5 @@ class Fotografia (models.Model):
     foto = models.ImageField(upload_to='fotos/%Y/%m/%d', blank=True)
     publica = models.BooleanField(default=False)
     data_fotografia = models.DateTimeField(default=datetime.now,blank=False)
-
     def __str__(self):
         return f"Fotografia [nome = {self.nome}]"
